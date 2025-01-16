@@ -3,7 +3,7 @@
 namespace Brainstream\ProductPdfGenerate\Http\Controllers\Catalog;
 
 use App\Http\Controllers\Controller;
-use Brainstream\Product\Models\Product;
+use Webkul\Product\Models\Product;
 use PDF;
 
 class ProductController extends Controller
