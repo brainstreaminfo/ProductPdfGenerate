@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Brainstream\ProductPdfGenerate\Http\Controllers\Admin\ProductPdfGenerateController;
-use Brainstream\ProductPdfGenerate\Http\Controllers\Catalog\ProductController;
+use Webkul\ProductPdfGenerate\Http\Controllers\Catalog\ProductController;
 
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin/productpdfgenerate'], function () {
     Route::controller(ProductPdfGenerateController::class)->group(function () {
