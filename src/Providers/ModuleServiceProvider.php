@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\ProductPdfGenerate\Providers;
+namespace Brainstream\ProductPdfGenerate\Providers;
 
 use Konekt\Concord\BaseModuleServiceProvider;
 

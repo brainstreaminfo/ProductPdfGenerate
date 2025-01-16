@@ -11,13 +11,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Webkul\\ProductPdfGenerate\\": "src/"
+            "Brainstream\\ProductPdfGenerate\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webkul\\ProductPdfGenerate\\Providers\\ProductPdfGenerateServiceProvider"
+                "Brainstream\\ProductPdfGenerate\\Providers\\ProductPdfGenerateServiceProvider"
             ],
             "aliases": {}
         }

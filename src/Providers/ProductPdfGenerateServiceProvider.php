@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\ProductPdfGenerate\Providers;
+namespace Brainstream\ProductPdfGenerate\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -26,11 +26,11 @@ class ProductPdfGenerateServiceProvider extends ServiceProvider
     
         // Override the specific view
         View::composer('shop::categories.view', function ($view) {
-            $view->setPath(base_path('packages/Webkul/ProductPdfGenerate/src/Resources/views/categories/view.blade.php'));
+            $view->setPath(base_path('packages/Brainstream/ProductPdfGenerate/src/Resources/views/categories/view.blade.php'));
         });
 
         View::composer('admin::catalog.products.index', function ($view) {
-            $view->setPath(base_path('packages/Webkul/ProductPdfGenerate/src/Resources/views/catalog/products/index.blade.php'));
+            $view->setPath(base_path('packages/Brainstream/ProductPdfGenerate/src/Resources/views/catalog/products/index.blade.php'));
         });
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\ProductPdfGenerate\Http\Controllers\Admin;
+namespace Brainstream\ProductPdfGenerate\Http\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;

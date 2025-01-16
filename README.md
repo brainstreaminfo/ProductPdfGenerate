@@ -21,18 +21,18 @@ Highlight product features, price , SKU selling points directly in the catalog.
 * Composer 2.6.3 or higher
 
 # Installation :
-Unzip the respective extension zip and then merge extracted folder in the packages/Webkul folder
+Unzip the Brainstream.zip file and move the extracted folder to the bagisto/packages directory.
 
 * Goto config/app.php file and add following line under 'providers'
 
 ```
-Webkul\ProductPdfGenerate\Providers\ProductPdfGenerateServiceProvider::class,
+Brainstream\ProductPdfGenerate\Providers\ProductPdfGenerateServiceProvider::class,
 ```
 
 * Goto composer.json file and add following line under 'psr-4'
 
 ```
-"Webkul\\ProductPdfGenerate\\": "packages/Webkul/ProductPdfGenerate/src"
+"Brainstream\\ProductPdfGenerate\\": "packages/Brainstream/ProductPdfGenerate/src"
 ```
 * Run these below commands to complete the setup:
 
