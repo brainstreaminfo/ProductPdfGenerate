@@ -24,7 +24,7 @@
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 8px;
             text-align: center;
             vertical-align: top; 
         }
@@ -39,7 +39,7 @@
         }
         p.product-name {
             word-wrap: break-word;
-            max-width: 120px;
+            max-width: 150px;
             margin: 5px auto;
             text-align: center;
         }
