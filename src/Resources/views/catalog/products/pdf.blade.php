@@ -65,7 +65,27 @@
                             @endphp
 
                             @if($image && Storage::disk('public')->exists($image->path))
-                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(Storage::disk('public')->path($image->path))) }}" alt="Product Image" class="product-image"/>
+                                @php
+                                    $imagePath = Storage::disk('public')->path($image->path);
+                                    $imageData = file_get_contents($imagePath);
+                                    $imageSize = getimagesize($imagePath);
+                                    $width = $imageSize[0];
+                                    $height = $imageSize[1];
+                                    // Resize image to a maximum width of 140px while maintaining aspect ratio
+                                    if ($width > 140) {
+                                        $height = (int) (140 / $width * $height);
+                                        $width = 140;
+                                    }
+                                    $imageResized = imagecreatetruecolor($width, $height);
+                                    $imageSource = imagecreatefromstring($imageData);
+                                    imagecopyresampled($imageResized, $imageSource, 0, 0, 0, 0, $width, $height, $imageSize[0], $imageSize[1]);
+                                    ob_start();
+                                    imagejpeg($imageResized, null, 75); // 75 is the quality (0-100)
+                                    $imageData = ob_get_clean();
+                                    imagedestroy($imageResized);
+                                    imagedestroy($imageSource);
+                                @endphp
+                                <img src="data:image/jpeg;base64,{{ base64_encode($imageData) }}" alt="Product Image" class="product-image"/>
                             @endif
                         </div>
                         <p class="product-name">{{ $product->name }}</p>
